@@ -1,3 +1,4 @@
+```mermaid
 gantt
     title Campus Buddy Development Timeline
     dateFormat YYYY-MM-DD
@@ -20,3 +21,4 @@ gantt
     
     section Documentation
     Final Documentation                 :after int1, 10d
+```
