@@ -1,6 +1,6 @@
 # Android App Development Methodology Chart
 
-mermaid ```
+```
 flowchart TD
     A[Pre-Development Planning] --> B[Project Initialization]
     B --> C[Architecture Setup]
