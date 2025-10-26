@@ -1,5 +1,88 @@
 # Android App Development Methodology Chart
 
+graph TD
+    A[Start: Pre-Development] --> B[Define Requirements<br/>Choose Architecture<br/>Design Schema]
+    B --> C[Project Initialization]
+    C --> D[Create Project<br/>Configure Gradle<br/>Setup Git]
+    D --> E[Architecture Setup]
+    E --> F[Package Structure<br/>DI - Hilt/Dagger<br/>Navigation Component]
+    
+    F --> G[Data Layer]
+    G --> H[Local Storage<br/>Room + DataStore]
+    G --> I[Remote Data<br/>Retrofit + OkHttp]
+    H --> J[Repository Pattern]
+    I --> J
+    
+    J --> K[Domain Layer]
+    K --> L[Use Cases<br/>Domain Models<br/>Business Logic]
+    
+    L --> M[Presentation Setup]
+    M --> N[Base Components<br/>Theme - Material3<br/>ViewModel Architecture]
+    
+    N --> O[UI Development]
+    O --> P[Splash Screen]
+    P --> Q{Auth Required?}
+    Q -->|Yes| R[Auth Screens<br/>Login/Register]
+    Q -->|No| S[Main/Home Screen]
+    R --> S
+    S --> T[Feature Screens<br/>Details/Forms/Settings]
+    
+    T --> U[Feature Implementation]
+    U --> V[Image Loading]
+    U --> W[Permissions]
+    U --> X[Background Work]
+    U --> Y[Notifications + FCM]
+    U --> Z[Analytics/Crashlytics]
+    U --> AA[Media Features]
+    U --> AB[Location Services]
+    U --> AC[Biometric Auth]
+    
+    V --> AD[Cross-Cutting Concerns]
+    W --> AD
+    X --> AD
+    Y --> AD
+    Z --> AD
+    AA --> AD
+    AB --> AD
+    AC --> AD
+    
+    AD --> AE[Error Handling<br/>Loading States<br/>Localization<br/>Accessibility<br/>Security]
+    
+    AE --> AF[Testing]
+    AF --> AG[Unit Tests<br/>Integration Tests<br/>UI Tests<br/>Instrumented Tests]
+    
+    AG --> AH[Optimization & Polish]
+    AH --> AI[Performance Profiling<br/>UI Polish<br/>Battery Optimization]
+    
+    AI --> AJ[Release Preparation]
+    AJ --> AK[Code Quality Check<br/>Build Configuration<br/>Store Assets<br/>Beta Testing]
+    
+    AK --> AL[Play Store Launch]
+    AL --> AM[Upload APK/AAB<br/>Submit for Review]
+    
+    AM --> AN[Post-Launch]
+    AN --> AO[Monitor Crashes<br/>Track Analytics<br/>Maintenance Updates]
+    
+    AO --> AP{New Features?}
+    AP -->|Yes| U
+    AP -->|No| AQ[End: Maintain & Monitor]
+    
+    style A fill:#e1f5ff
+    style E fill:#fff4e1
+    style G fill:#f0e1ff
+    style K fill:#e1ffe1
+    style M fill:#ffe1e1
+    style O fill:#fff9e1
+    style U fill:#e1ffff
+    style AD fill:#ffe1f5
+    style AF fill:#f5e1ff
+    style AH fill:#e1fff9
+    style AJ fill:#ffede1
+    style AL fill:#e8ffe1
+    style AN fill:#e1e8ff
+    style AQ fill:#90EE90
+
+
 ## 📋 Phase 1: Pre-Development
 ```
 ├─ Define Requirements & Features
