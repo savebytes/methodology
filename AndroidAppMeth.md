@@ -1,86 +1,76 @@
 # Android App Development Methodology Chart
 
-graph TD
-    A[Start: Pre-Development] --> B[Define Requirements<br/>Choose Architecture<br/>Design Schema]
-    B --> C[Project Initialization]
-    C --> D[Create Project<br/>Configure Gradle<br/>Setup Git]
-    D --> E[Architecture Setup]
-    E --> F[Package Structure<br/>DI - Hilt/Dagger<br/>Navigation Component]
+mermaid ```
+flowchart TD
+    A[Pre-Development Planning] --> B[Project Initialization]
+    B --> C[Architecture Setup]
+    C --> D[Data Layer]
+    D --> E[Domain Layer]
+    E --> F[Presentation Setup]
+    F --> G[UI Development]
+    G --> H[Feature Implementation]
+    H --> I[Cross-Cutting Concerns]
+    I --> J[Testing]
+    J --> K[Optimization]
+    K --> L[Release Preparation]
+    L --> M[Play Store Launch]
+    M --> N[Post-Launch Monitoring]
     
-    F --> G[Data Layer]
-    G --> H[Local Storage<br/>Room + DataStore]
-    G --> I[Remote Data<br/>Retrofit + OkHttp]
-    H --> J[Repository Pattern]
-    I --> J
+    A --> A1[Requirements & Architecture]
+    A --> A2[Database Schema Design]
+    A --> A3[UI/UX Wireframes]
     
-    J --> K[Domain Layer]
-    K --> L[Use Cases<br/>Domain Models<br/>Business Logic]
+    B --> B1[Create Project]
+    B --> B2[Configure Gradle]
+    B --> B3[Setup Git]
     
-    L --> M[Presentation Setup]
-    M --> N[Base Components<br/>Theme - Material3<br/>ViewModel Architecture]
+    C --> C1[Package Structure]
+    C --> C2[DI Setup]
+    C --> C3[Navigation Component]
     
-    N --> O[UI Development]
-    O --> P[Splash Screen]
-    P --> Q{Auth Required?}
-    Q -->|Yes| R[Auth Screens<br/>Login/Register]
-    Q -->|No| S[Main/Home Screen]
-    R --> S
-    S --> T[Feature Screens<br/>Details/Forms/Settings]
+    D --> D1[Room Database]
+    D --> D2[Retrofit & OkHttp]
+    D --> D3[Repository Pattern]
     
-    T --> U[Feature Implementation]
-    U --> V[Image Loading]
-    U --> W[Permissions]
-    U --> X[Background Work]
-    U --> Y[Notifications + FCM]
-    U --> Z[Analytics/Crashlytics]
-    U --> AA[Media Features]
-    U --> AB[Location Services]
-    U --> AC[Biometric Auth]
+    E --> E1[Use Cases]
+    E --> E2[Domain Models]
     
-    V --> AD[Cross-Cutting Concerns]
-    W --> AD
-    X --> AD
-    Y --> AD
-    Z --> AD
-    AA --> AD
-    AB --> AD
-    AC --> AD
+    F --> F1[Material3 Theme]
+    F --> F2[ViewModels]
+    F --> F3[Base Components]
     
-    AD --> AE[Error Handling<br/>Loading States<br/>Localization<br/>Accessibility<br/>Security]
+    G --> G1[Splash Screen]
+    G1 --> G2[Auth Screens]
+    G2 --> G3[Main Screen]
+    G3 --> G4[Feature Screens]
     
-    AE --> AF[Testing]
-    AF --> AG[Unit Tests<br/>Integration Tests<br/>UI Tests<br/>Instrumented Tests]
+    H --> H1[Permissions]
+    H --> H2[Notifications]
+    H --> H3[Media Features]
+    H --> H4[Analytics]
     
-    AG --> AH[Optimization & Polish]
-    AH --> AI[Performance Profiling<br/>UI Polish<br/>Battery Optimization]
+    I --> I1[Error Handling]
+    I --> I2[Localization]
+    I --> I3[Security]
+    I --> I4[Accessibility]
     
-    AI --> AJ[Release Preparation]
-    AJ --> AK[Code Quality Check<br/>Build Configuration<br/>Store Assets<br/>Beta Testing]
+    J --> J1[Unit Tests]
+    J --> J2[UI Tests]
     
-    AK --> AL[Play Store Launch]
-    AL --> AM[Upload APK/AAB<br/>Submit for Review]
+    K --> K1[Performance]
+    K --> K2[UI Polish]
     
-    AM --> AN[Post-Launch]
-    AN --> AO[Monitor Crashes<br/>Track Analytics<br/>Maintenance Updates]
+    L --> L1[Build Config]
+    L --> L2[Store Assets]
+    L --> L3[Beta Testing]
     
-    AO --> AP{New Features?}
-    AP -->|Yes| U
-    AP -->|No| AQ[End: Maintain & Monitor]
+    M --> M1[Upload APK]
+    M --> M2[Submit Review]
     
-    style A fill:#e1f5ff
-    style E fill:#fff4e1
-    style G fill:#f0e1ff
-    style K fill:#e1ffe1
-    style M fill:#ffe1e1
-    style O fill:#fff9e1
-    style U fill:#e1ffff
-    style AD fill:#ffe1f5
-    style AF fill:#f5e1ff
-    style AH fill:#e1fff9
-    style AJ fill:#ffede1
-    style AL fill:#e8ffe1
-    style AN fill:#e1e8ff
-    style AQ fill:#90EE90
+    N --> N1[Monitor Crashes]
+    N --> N2[Track Analytics]
+    N --> N3[Maintenance]
+```
 
 
 ## 📋 Phase 1: Pre-Development
